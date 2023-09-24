@@ -40,3 +40,29 @@ cardDescription: string = "descrição da foto"
 photoCover: string = "url.da.foto"
 ~~~
 * E na página.html onde se usa o component vc declara o que vai ficar no component
+
+### Criando outras páginas
+* Crie o component na pasta pages
+* no módulo `app-routing.module.ts` tem a parte de routes que é um vetor que trata das rotas.  
+~~~
+const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'content',
+    component: ContentComponent
+  }
+];
+~~~
+* quando entrar na pagina pela url sem especificar nada ele usa o `componen: HomeComponent`, e se colocar `url/content` ele usa o `ContentComponent`  
+* ao inves de usar o href usar o [routerLink]
+* Os dados da pagina da `ContentPage` virão de um arquivo externo, que pega os dados através de um Id, e altera os dados dinamicamente de acordo com o Id
+* Na pagina content no método construtor colocar o activatedRout  
+~~~
+constructor(
+    private route:ActivatedRoute
+) { }
+~~~
+* No `ngOnInit()` definir os parâmetros
