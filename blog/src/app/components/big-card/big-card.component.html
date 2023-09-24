@@ -1,18 +1,16 @@
 <div class="container__big-card">
-  <hr>
   <div class="big-card__photo">
     <img
-    src="https://import.cdn.thinkific.com/220759/VcZRU85Tqew44oSvSRqu_Angular.png"
-    alt="placeholder"
-    height="250px"
+    src="{{ photoCover }}"
+    alt=""
     srcset=""
     >
   </div>
   <div class="big-card__title">
-    <h1><a href="#">Reumo básico de Angular</a></h1>
+    <h1><a href="#">{{ cardTitle }}</a></h1>
   </div>
 
   <div class="big-card__description">
-    <p><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et felis vel orci fermentum lacinia. Curabitur ornare condimentum massa, at scelerisque lacus interdum sed. Sed tempus eget ex ut venenatis.</a></p>
+    <p><a href="#">{{cardDescription}}</a></p>
   </div>
 </div>

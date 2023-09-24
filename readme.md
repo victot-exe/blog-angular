@@ -20,4 +20,23 @@ Este projeto é um blog para aplicar os conhecimentos adiquiridos em Angular dur
     * Ex: `home` -> para a home page
 *@media querios css* (desing responsivo)
 }
-* desacoplando os componentes da parte visual
+### Desacoplando os componentes da parte visual
+* Declare em variáveis no seu arquivo .ts  
+~~~
+photoCover: string = "url.da.foto"
+cardTitle: string = "Titulo da foto"
+cardDescription: string = "descrição da foto"
+~~~
+* Faça a relação das strings com o arquivo html
+~~~
+<img
+    src="{{ photoCover }}">
+<h1><a href="#">{{ cardTitle }}</a></h1>
+<p><a href="#">{{cardDescription}}</a></p>
+~~~
+* Deixe as variáveis para receber de forma dinâmica os valores -> usando o @Input()
+~~~
+@Input()
+photoCover: string = "url.da.foto"
+~~~
+* E na página.html onde se usa o component vc declara o que vai ficar no component
